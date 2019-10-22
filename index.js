@@ -1,4 +1,27 @@
+// dependecies
 const express = require("express");
+const mysql = require("mysql")
+
+// mysql config
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'password',
+    database: 'Explorer_db'
+});
+
+// testing mysql connection
+connection.connect(function(err, results, fields){
+    if(err) throw err;
+    console.log("connected as id" + connection.threadId);
+});
+
+// const columns = ["facts", "comments", "destination"]
+// const table = ["locations"]
+// connection.query("SELECT ?? FROM ??", [columns, table], function(error, results, fields){
+    // console.log(results)
+// })
+// connection.end();
 
 const PORT = process.env.NODE_ENV || 3001; 
 
@@ -13,25 +36,42 @@ app.use(express.urlencoded({extended: true}));
 
 // set up routes - IMR
 
-app.get("/nat", function(req, res){
-    res.write("nat is going to hit papito")
-    res.end(); 
+// app.get("/api/locations/all", function(req, res){
+//     connection.query(`SELECT * FROM locations`, function(err, results, fiels){
+//         if(err) throw err
+//         res.json(results)
+//     })
+// })
+
+// app.get("/api/user/all", function(req, res){
+//     connection.query('SELECT* FROM explorers', function(err, result, fields,){
+//         if(err) throw err;
+//         res.json(results);
+//     })
+// })
+
+app.get("/api/:table/all", function (req, res){
+    const table = req.params.table
+    connection.query('SELECT * FROM ??', [table], function(err, results, fields){
+        if(err) throw err;
+        res.json(results)
+    })
 })
 
-app.get("/j", function(req, res){
-    res.write("j is cool so he wont hit no one")
-    res.end(); 
+app.get("/api/user/:id", function(req, res){
+    const id = req.params.id;
+    connection.query('SELECT * FROM explorers WHERE id=?', [id], function(err, results, fields){
+        if(err) throw err;
+        res.json(results);
+    })
 })
 
-app.get("/papito", function(req, res){
-    res.json({hit:"papito, dont do violance"})
-})
-
-app.get("/papito/:message", function(req, res){
-    const message = req.params.message;
-    console.log(message); 
-    res.write(message)
-    res.end(); 
+app.get("/api/locations/:id", function(req, res){
+    const id = req.params.id;
+    connection.query('SELECT * FROM locations WHERE id=?', [id], function(err, results, fields){
+        if(err) throw err;
+        res.json(results);
+    })
 })
 
 app.listen(PORT, () => console.log(`Port stated on port: ${PORT}`))
