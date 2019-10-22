@@ -11,23 +11,9 @@ if(process.env.NODE_ENV == "production"){
 app.use(express.json()); 
 app.use(express.urlencoded({extended: true}));
 
-// set up routes - IMR
 
-app.get("/nat", function(req, res){
-    res.write("nat is going to hit papito")
-    res.end(); 
-})
 
-app.get("/j", function(req, res){
-    res.write("j is cool so he wont hit no one")
-    res.end(); 
-})
-
-app.get("/papito", function(req, res){
-    res.json({hit:"papito, dont do violance"})
-})
-
-app.get("/papito/:message", function(req, res){
+app.get("/", function(req, res){
     const message = req.params.message;
     console.log(message); 
     res.write(message)
