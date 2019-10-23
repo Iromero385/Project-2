@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Home from './components/Home';
-import About from './components/About';
-import Contact from './components/Contact';
-import NoMatch from './components/NoMatch';
-import Comments from './components/Home';
-import Login from './components/Login';
-import Layout from './components/Layout';
+import Home from './components/pages/Home';
+import About from './components/pages/About';
+import Contact from './components/pages/Contact';
+import NoMatch from './components/pages/NoMatch';
+import Comments from './components/pages/Home';
+import Login from './components/pages/Login';
 import NavigationBar from './components/NavigationBar';
+import Layout from './components/Layout';
 
 //creates a wrapper inst. div components
 class App extends Component {
