@@ -1,7 +1,7 @@
 import React from 'react';
 import { Jumbotron, Button } from 'react-bootstrap';
-import styled from 'styled-components';
-import bridgeImage from '../assets/SfImages/bridge.jpeg';
+// import styled from 'styled-components';
+// import bridgeImage from '../assets/SfImages/bridge.jpeg';
 
 
 export const Jumbotron = () => (
@@ -24,3 +24,5 @@ export const Jumbotron = () => (
     </Jumbotron>
 
 )
+
+export default Jumbotron;
