@@ -7,6 +7,7 @@ import Contact from './components/pages/Contact';
 import NoMatch from './components/pages/NoMatch';
 import Comments from './components/pages/Home';
 import Login from './components/pages/Login';
+import Signup from './components/pages/Signup';
 import NavigationBar from './components/NavigationBar';
 import Layout from './components/Layout';
 
@@ -24,6 +25,7 @@ class App extends Component {
               <Route path="/contact" component={Contact} />
               <Route path="/comments" component={Comments} />
               <Route path="/login" component={Login} />
+              <Route path="/signup" component={Signup} />
               <Route component={NoMatch} />
             </Switch>
           </Router>
