@@ -4,7 +4,7 @@ const Login = () => {
 
    document.body.style.backgroundImage = "url('https://media0.giphy.com/media/bSHYJAbDSVUUo/source.gif')"
    document.body.style.backgroundSize = "cover"
-    return (<div style={{ textAlign: "center", marginTop: "170px", backgroundColor: "black", marginRight: "300px", marginLeft: "300px", backgroundImage: "url('https://media2.giphy.com/media/TZf4ZyXb0lXXi/giphy.gif')", backgroundSize: "cover" }}>
+    return (<div style={{ textAlign: "center", marginTop: "170px", backgroundColor: "black", marginRight: "300px", marginLeft: "300px", backgroundImage: "url('https://media1.giphy.com/media/peFJZc82UZ4iY/source.gif')" }}>
 
         <h1 style={{ color: "green", textAlign: "center"}}>Welcome Back Explorer!</h1>
         <form>

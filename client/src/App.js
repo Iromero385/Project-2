@@ -26,6 +26,7 @@ class App extends Component {
               <Route path="/contact" component={Contact} />
               <Route path="/comments" component={Comments} />
               <Route path="/login" component={Login} />
+              <Route path="/signup" component={Signup} />              
               <Route path="/seattle" component={Seattle} />
               {/* <Route path="/portland" component={Portland} /> */}
               <Route component={NoMatch} />

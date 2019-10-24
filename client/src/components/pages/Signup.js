@@ -7,12 +7,6 @@ const Signup = () => {
 
     return (<div style={{ textAlign: "center", marginTop: "170px" }}>
 
-
-        <div>
-            <button style={{color:"green", paddingRight: "100"}}><b>Sign Up!</b></button>
-        </div>
-
-
         <h1 style={{ color: "green" }}>Welcome Explorer!</h1>
         <form>
             <label>
@@ -34,6 +28,9 @@ const Signup = () => {
         </form>
         <form>
             <input style={{ color: "green", backgroundColor: "empty" }} type="submit" value="Submit" />
+        </form>
+        <form>
+            <button style={{color:"green", marginTop: "7px"}}>Sign Up!</button>
         </form>
     </div>)
 }
