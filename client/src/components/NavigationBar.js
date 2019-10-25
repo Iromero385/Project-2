@@ -17,36 +17,35 @@ const Styles = styled.div`
 
 const NavigationBar = () => (
     <Styles>
-        <Router>
         <Navbar expand="lg">
             <Navbar.Brand href="/">Explore i.o</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
                     <Nav.Item>
-                        <Nav.Link>
-                            <Link to="/">Home</Link>
+                        <Nav.Link href="/">
+                            Home
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link>
-                            <Link to="/about">About</Link>
+                        <Nav.Link href="/About">
+                            About
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link>
-                            <Link to="/contact">Contact</Link>
+                        <Nav.Link href="/contact">
+                            Contact
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link>
-                            <Link to="/comments">Comments</Link>
+                        <Nav.Link href="/comments">
+                            Comments
                         </Nav.Link>
                     </Nav.Item>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
-        </Router>
+
     </Styles >
 )
 export default NavigationBar;

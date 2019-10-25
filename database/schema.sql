@@ -1,34 +1,29 @@
-DROP DATABASE IF EXISTS Explore_db;
-
-CREATE database Explorer_db;
-
-USE Explorer_db; 
-
+DROP DATABASE IF EXISTS Explorer_db;
+CREATE DATABASE Explorer_db;
+USE Explorer_db;
 CREATE TABLE explorers(
-id int NOT NULL auto_increment,
-userName varchar(100) NOT NULL,
-passcode varchar(255) NOT NULL,
-PRIMARY KEY(id)
+    id INT AUTO_INCREMENT NOT NULL,
+    userName VARCHAR(100) NOT NULL,
+    passcode VARCHAR(55) NOT NULL,
+    PRIMARY KEY (id)
 );
-
-CREATE TABLE locations(
-id int NOT NULL auto_increment,
-destination varchar(255) NOT NULL,
-address varchar(255) NOT NULL,
-rating int NOT NULL,
-cost decimal(10,2),
-facts varchar(255) NOT NULL, 
-comments varchar(255),
-userId int NOT NULL, 
-urlImage varchar(255) NOT NULL,
-primary key(id),
-foreign key(userId) references explorers(id)
+CREATE TABLE locations (
+    id INT AUTO_INCREMENT NOT NULL,
+    city VARCHAR(100) NOT NULL,
+    destination VARCHAR(255) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    rating INT NOT NULL,
+    cost DECIMAL(4,2),
+    facts VARCHAR(255) NOT NULL,
+    comments VARCHAR(255),
+    userId INT NOT NULL, 
+    urlImage VARCHAR(255) NOT NULL, 
+    PRIMARY KEY(id),
+    FOREIGN KEY(userId) REFERENCES explorers(id)
 );
-
-INSERT INTO explorers (userName, passcode) 
-value ("papito@gmail.com", "123456");
-
-INSERT INTO locations(destination, address, rating, cost, facts, comments, userId, urlImage)
-value("Tacos Chingones", "123 yo mama street Martinez CA 94553", 5, 2.99, "The tacos have melted cheeese between the first and second tortilla layers", "it melts in your face",1,"https://images.getbento.com/accounts/6c88495d27880ed358a00d23e3eb0da9/media/images/289347MdwHLVERTeasl7HHKmU__S8A3968.jpg?w=1000&fit=max&auto=compress,format&h=1000" )
-
-
+INSERT INTO explorers (userName, passcode)
+VALUE ("papito@gmail.com", "12345"), ("JIGGALOW", "QUERY");
+INSERT INTO locations (city,destination, address, rating, cost, facts, comments, userId, urlImage)
+VALUE ("San Francisco","Alcatraz","",4.5, 49.95,"Alcatraz reveals stories of American incarceration, justice, and our common humanity.", "The trip to alcatraz was amazing. Learned a lot", 1, "../../assets/SfImages/alcatrazz.jpg" ),
+("San Francisco","Go-cart experience", "Embarcadero,Ca", 4.8, 126.13, "Pass through the famous Golden Gate Park and explore San Francisco's most iconic sites on a GoCar. Visit the spots you can't get to on a bus and choose to customize your own map! It's totally up to you.", "whoaa!Go carting was an experience for the books", 2, "../../assets/SfImages/tour-yellow-cars.jpeg"),
+("San Francisco","Full house scene", "Castro st.", 3.5, 0, "Take some amazing pictures in the actual location where the show 'Full House' was filmed. Rekindle the 90's sitcom show while having a picnic near the famous victorian houses.", " WOW. what a nice picnic we had today.", 1, "../../assets/SfImages/houses.jpeg");

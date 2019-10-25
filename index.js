@@ -47,6 +47,13 @@ app.get("/api/locations/:id", function (req, res) {
         res.json(results)
     })
 })
+app.get("/api/locations/city/:city", function (req, res) {
+    const city = req.params.city.split("+").join(" ");
+    connection.query(`SELECT * FROM locations WHERE ?`, { city }, function (err, results, fields) {
+        if (err) throw err;
+        res.json(results)
+    })
+})
 
 
 

@@ -14,7 +14,7 @@ const Portland = () => (
     {/* first row begins */}
     <Row className="bg-dark mt-5">
       <Col md={12} className="bg-light">
-        <h1>Explore Seattle</h1>
+        <h1>Explore Some Cities</h1>
       </Col>
     </Row>
     {/* second row begins */}
