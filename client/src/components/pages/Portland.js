@@ -14,7 +14,7 @@ const Portland = () => (
     {/* first row begins */}
     <Row className="bg-dark mt-5">
       <Col md={12} className="bg-light">
-        <h1>Explore Seattle</h1>
+        <h1>Explore Some Cities</h1>
       </Col>
     </Row>
     {/* second row begins */}
@@ -36,7 +36,8 @@ const Portland = () => (
         pic={pic2}
         title={"Small Group Craft Breweries Tour by Bike"}
         text={"Hop on a bike, join an expert local guide, and discover some of Portland’s best craft breweries. Ride through some of the city’s prettiest neighborhoods, stopping for beer samples along the way and learning about Portland’s craft beer scene."}
-        price ={"$76/ person f"}
+        rating={"5"}
+        price ={"$76/ person"}
       />
       <ImageCardHome
         pic={pic3}
