@@ -14,7 +14,7 @@ connection.connect(function (err, results, fields) {
     console.log('connected as id ' + connection.threadId);
 });
 
-const PORT = process.env.NODE_ENV || 3001;
+const PORT = process.env.NODE_ENV || 3002;
 const app = express();
 if (process.env.NODE_ENV == "production") {
     app.use(express.static("client/build"));
