@@ -75,14 +75,7 @@ const Home = () => (
         rating={"4.5"}
         price={"Free but may need to pay for additional parking reservation or bus fee"}
       />
-      <ImageCardHome
-        pic={example9}
-        title={"San Francisco: Scenic Helicopter Flight"}
-        text={"Soar over San Francisco on an exhilarating 25-30 minute helicopter flight and get bird's eye views of Alcatraz, the Golden Gate Bridge, Angel Island and the coastline of California."}
-        rating={"5"}
-        price={"$265/person"}
-      />
-      <ImageCardHome
+       <ImageCardHome
         pic={example7}
         title={"San Francisco: Bay Sailing Tour with Drinks"}
         text={"For a relaxing afternoon on the water, hop aboard the Privateer traditional sailboat for a 90-minute cruise of the bay, complete with beer and wine. Get personal attention from a skilled crew as you enjoy stunning views of the bay!"}
@@ -91,15 +84,22 @@ const Home = () => (
       />
       <ImageCardHome
         pic={example8}
-        title={"San Francisco Hop-On Hop-Off: Classic, Premium or Deluxe"}
+        title={"Hop-On Hop-Off: Classic, Premium or Deluxe"}
         text={"See the sights of San Francisco at your own pace from the top deck of a double decker, hop-on hop-off sightseeing bus. Choose from a Classic, Premium or Deluxe Ticket and marvel at monuments such as the Transamerica Pyramid and Golden Gate Bridge."}
         rating={"4.7"}
         price={"$55"}
       />
+       <ImageCardHome
+        pic={example9}
+        title={" Scenic Helicopter Flight"}
+        text={"Soar over San Francisco on an exhilarating 25-30 minute helicopter flight and get bird's eye views of Alcatraz, the Golden Gate Bridge, Angel Island and the coastline of California."}
+        rating={"5"}
+        price={"$265/person"}
+      />
       <ImageCardHome
         pic={example10}
         title={"Skip The Line: California Academy of Sciences Entrance"}
-        text={"Take some amazing pictures in the actual location where the show Full House was filmed"}
+        text={"Visit San Francisco’s California Academy of Sciences, the world’s only aquarium-planetarium-rainforest-living museum. The venue allows you to see African penguins, rocket through the galaxy, experience a coral reef, and much more, all in one place!"}
         rating={"3.5"}
         price={"$35.95"}
       />
