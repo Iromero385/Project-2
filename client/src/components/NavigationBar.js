@@ -1,7 +1,6 @@
 import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import styled from 'styled-components';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 const Styles = styled.div`
   .navbar {
@@ -38,8 +37,8 @@ const NavigationBar = () => (
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link href="/comments">
-                            Comments
+                        <Nav.Link href="/login">
+                            Login
                         </Nav.Link>
                     </Nav.Item>
                 </Nav>
